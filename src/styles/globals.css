@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wrapper {
+  @apply mx-auto px-4 laptop:max-w-[1440px] laptop:px-20 desktop:max-w-[1920px] desktop:px-40;
+}
