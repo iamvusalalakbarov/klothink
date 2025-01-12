@@ -87,6 +87,7 @@ const TestimonialsSection = () => {
               slidesPerView: 3,
             },
             1920: {
+              slidesPerView: 3,
               spaceBetween: 30,
             },
           }}
@@ -133,7 +134,7 @@ const TestimonialsSection = () => {
                 </div>
               </div>
 
-              <p className="text-sm text-grey-30 laptop:text-base desktop:text-lg">
+              <p className="line-clamp-3 text-sm text-grey-30 laptop:text-base desktop:text-lg">
                 {testimonial.comment}
               </p>
             </div>
