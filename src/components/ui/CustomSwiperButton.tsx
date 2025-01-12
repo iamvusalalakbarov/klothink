@@ -4,6 +4,7 @@ import { CustomSwiperButtonDirection } from '@/types/enums';
 
 interface ICustomSwiperButtonProps {
   direction: CustomSwiperButtonDirection;
+  withoutBorder?: boolean;
 }
 
 const CustomSwiperButton: React.FC<ICustomSwiperButtonProps> = (props) => {
@@ -15,6 +16,7 @@ const CustomSwiperButton: React.FC<ICustomSwiperButtonProps> = (props) => {
           'prev [&>svg]:rotate-180':
             props.direction === CustomSwiperButtonDirection.PREV,
           next: props.direction === CustomSwiperButtonDirection.NEXT,
+          '!border-none': props.withoutBorder,
         }
       )}
     >
