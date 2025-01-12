@@ -122,10 +122,10 @@ const copyrightLinks = [
 const Footer = () => {
   return (
     <footer>
-      <div className="border-y border-light-95 pt-[30px] laptop:pt-0">
-        <div className="wrapper laptop:flex">
-          <div className="space-y-[30px] laptop:p-20 laptop:pl-0">
-            <div className="space-y-6 laptop:min-w-[355px] laptop:space-y-[30px] desktop:space-y-[60px]">
+      <div className="border-y border-light-95 pt-[30px] lg:pt-0">
+        <div className="wrapper lg:flex">
+          <div className="space-y-[30px] lg:p-20 lg:pl-0">
+            <div className="space-y-6 lg:min-w-[355px] laptop:space-y-[30px] desktop:space-y-[60px]">
               <div className="flex items-center justify-between">
                 <Link
                   href="/"
@@ -139,7 +139,7 @@ const Footer = () => {
                   />
                 </Link>
 
-                <div className="laptop:hidden">
+                <div className="lg:hidden">
                   <SocialNetworks />
                 </div>
               </div>
@@ -163,7 +163,7 @@ const Footer = () => {
               </form>
             </div>
 
-            <ul className="flex items-center justify-center gap-x-6 border-t border-light-95 px-[60px] py-6 laptop:hidden">
+            <ul className="flex items-center justify-center gap-x-6 border-t border-light-95 px-[60px] py-6 lg:hidden">
               {mobileMenu.map((item, index) => (
                 <li key={index}>
                   <Link
@@ -177,7 +177,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="hidden flex-1 items-start justify-between self-end border-l border-light-95 p-[60px] pr-0 laptop:flex">
+          <div className="hidden flex-1 items-start justify-between self-end border-l border-light-95 p-[60px] pr-0 lg:flex">
             {menu.map((item, index) => (
               <div key={index} className="space-y-6">
                 <Link
@@ -202,12 +202,12 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="wrapper flex flex-col items-center justify-center gap-y-[14px] py-5 text-center laptop:flex-row laptop:justify-between">
-        <ul className="flex flex-col gap-y-1.5 laptop:flex-row laptop:items-center laptop:divide-x laptop:divide-light-95">
+      <div className="wrapper flex flex-col items-center justify-center gap-y-[14px] py-5 text-center lg:flex-row lg:justify-between">
+        <ul className="flex flex-col gap-y-1.5 lg:flex-row lg:items-center lg:divide-x lg:divide-light-95">
           {copyrightLinks.map((item, index) => (
             <li
               key={index}
-              className="first:pl-0 last:pr-0 laptop:px-5 desktop:px-6"
+              className="first:pl-0 last:pr-0 lg:px-5 desktop:px-6"
             >
               <Link
                 href={item.link}
@@ -219,7 +219,7 @@ const Footer = () => {
           ))}
         </ul>
 
-        <div className="hidden laptop:block">
+        <div className="hidden lg:block">
           <SocialNetworks />
         </div>
 

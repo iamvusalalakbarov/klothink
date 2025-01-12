@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <>
       {/* Laptop, Desktop View */}
-      <header className="hidden border-b border-light-95 bg-white laptop:block">
+      <header className="hidden border-b border-light-95 bg-white lg:block">
         <div className="wrapper relative flex items-center justify-between bg-white py-[18px]">
           <div className="flex items-center gap-x-2.5">
             {navLinks.map((link, index) => (
@@ -76,7 +76,7 @@ const Header = () => {
       </header>
 
       {/* Mobile View */}
-      <header className="border-b border-light-95 bg-white laptop:hidden">
+      <header className="border-b border-light-95 bg-white lg:hidden">
         <div className="wrapper flex items-center justify-between py-5">
           <Link href="/" className="relative size-9">
             <Image
