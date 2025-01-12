@@ -36,7 +36,7 @@ const colors = ['#739CDA', '#DAA573', '#DAD673'];
 
 const HeroSection = () => {
   return (
-    <section className="wrapper mb-20 mt-10 flex flex-col gap-y-10 lg:flex-row lg:items-center lg:justify-between lg:gap-x-[30px] laptop:mb-[150px] laptop:mt-20 laptop:gap-x-[60px] desktop:mb-[200px] desktop:mt-[100px] desktop:gap-x-20">
+    <section className="wrapper mb-20 mt-10 flex flex-col gap-y-10 lg:flex-row lg:items-center lg:justify-between lg:gap-x-[30px] laptop:mb-[150px] laptop:gap-x-[60px] desktop:mb-[200px] desktop:mt-[100px] desktop:gap-x-20">
       <div className="flex flex-col gap-y-10 lg:w-1/2 lg:py-3 laptop:gap-y-[60px] desktop:gap-y-20 desktop:py-0">
         <div className="space-y-6 laptop:space-y-10">
           <div>
