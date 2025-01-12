@@ -46,7 +46,7 @@ export default function Home() {
           description="At Klothink, we've designed a straightforward shopping experience to make fashion accessible. Explore the journey from discovering the latest trends to receiving your handpicked styles with ease."
         />
 
-        <div className="flex flex-col gap-2.5 rounded-2xl border border-light-97 bg-light-99 p-2.5 lg:flex-row laptop:gap-4 laptop:p-4 desktop:gap-5 desktop:rounded-[20px] desktop:p-5">
+        <div className="grid grid-cols-1 gap-2.5 rounded-2xl border border-light-97 bg-light-99 p-2.5 md:grid-cols-2 laptop:grid-cols-4 laptop:gap-4 laptop:p-4 desktop:gap-5 desktop:rounded-[20px] desktop:p-5">
           {experienceSteps.map((step, index) => (
             <div
               key={index}
