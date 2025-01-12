@@ -1,5 +1,6 @@
 import AboutUsSection from '@/components/AboutUsSection';
 import HeroSection from '@/components/HeroSection';
+import ProductsSection from '@/components/ProductsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import SectionHeading from '@/components/ui/SectionHeading';
 
@@ -27,6 +28,8 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+
+      <ProductsSection />
 
       <AboutUsSection />
 

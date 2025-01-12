@@ -15,42 +15,42 @@ const testimonials = [
     comment:
       "Klothink exceeded my expectations. The gown's quality and design made me feel like a queen. Fast shipping, too!",
     stars: 5,
-    avatar: '/images/customer-sarah-thompson.png',
+    avatar: '/images/customers/customer-sarah-thompson.png',
   },
   {
     customer: 'Rajesh Patel',
     comment:
       'Absolutely love the style and warmth of the jacket. A perfect blend of fashion and functionality!',
     stars: 5,
-    avatar: '/images/customer-rajesh-patel.png',
+    avatar: '/images/customers/customer-rajesh-patel.png',
   },
   {
     customer: 'Emily Walker',
     comment:
       'Adorable and comfortable! My daughter loves her new outfit. Thank you, Klothink, for dressing our little fashionista.',
     stars: 5,
-    avatar: '/images/customer-emily-walker.png',
+    avatar: '/images/customers/customer-emily-walker.png',
   },
   {
     customer: 'Sarah Thompson',
     comment:
       "Klothink exceeded my expectations. The gown's quality and design made me feel like a queen. Fast shipping, too!",
     stars: 4,
-    avatar: '/images/customer-sarah-thompson.png',
+    avatar: '/images/customers/customer-sarah-thompson.png',
   },
   {
     customer: 'Rajesh Patel',
     comment:
       'Absolutely love the style and warmth of the jacket. A perfect blend of fashion and functionality!',
     stars: 4,
-    avatar: '/images/customer-rajesh-patel.png',
+    avatar: '/images/customers/customer-rajesh-patel.png',
   },
   {
     customer: 'Emily Walker',
     comment:
       'Adorable and comfortable! My daughter loves her new outfit. Thank you, Klothink, for dressing our little fashionista.',
     stars: 4,
-    avatar: '/images/customer-emily-walker.png',
+    avatar: '/images/customers/customer-emily-walker.png',
   },
 ];
 
