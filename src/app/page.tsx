@@ -36,7 +36,7 @@ export default function Home() {
       <TestimonialsSection />
 
       {/* How it Works ? */}
-      <section className="wrapper space-y-10 py-10 laptop:space-y-[50px] laptop:py-[100px] desktop:space-y-20 desktop:py-[150px]">
+      <section className="wrapper mb-10 space-y-10 laptop:mb-[100px] laptop:space-y-[50px] desktop:mb-[150px] desktop:space-y-20">
         <SectionHeading
           title="Seamless Experience."
           subtitle="How it Works ?"

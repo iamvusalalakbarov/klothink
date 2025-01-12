@@ -65,7 +65,7 @@ const AboutUsSection = () => {
   };
 
   return (
-    <section className="wrapper space-y-10 py-20 laptop:space-y-[60px] laptop:py-[150px]">
+    <section className="wrapper mb-20 space-y-10 laptop:mb-[150px] laptop:space-y-[60px]">
       <SectionHeading
         title="The Klothink Experience."
         subtitle="About Us"

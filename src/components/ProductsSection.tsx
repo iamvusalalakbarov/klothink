@@ -65,7 +65,7 @@ const ProductsSection = () => {
   const swiperProgressBarInnerRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <section className="wrapper space-y-10 py-20 laptop:space-y-[60px] laptop:py-[150px]">
+    <section className="wrapper mb-20 space-y-10 laptop:mb-[150px] laptop:space-y-[60px]">
       <div className="flex flex-col gap-y-6 lg:flex-row lg:items-center lg:justify-between">
         <SectionHeading
           title="Discover Fashion."
