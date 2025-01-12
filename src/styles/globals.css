@@ -2,10 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: 'Manrope', sans-serif;
+}
+
 .wrapper {
   @apply mx-auto px-4 laptop:max-w-[1440px] laptop:px-20 desktop:max-w-[1920px] desktop:px-40;
 }
 
 .custom-swiper-button.disabled {
   @apply bg-white text-grey-40 border border-grey-70 cursor-not-allowed;
+}
+
+/* Mantine Accordion for FAQ */
+.faq-accordion-root {
+  @apply !space-y-4 max-md:[&:not(:first-child)]:!hidden;
+}
+
+.faq-accordion-item {
+  @apply !p-6 !rounded-[14px] !bg-white data-[active=true]:!bg-light-99 !border !border-light-95;
+}
+
+.faq-accordion-control {
+  @apply !px-0 hover:!bg-inherit active:!bg-inherit !justify-between !gap-x-10;
+}
+
+.faq-accordion-chevron[data-rotate] {
+  @apply !rotate-45;
+}
+
+.faq-accordion-label {
+  @apply !py-0 !font-medium !text-base !text-grey-15;
+}
+
+.faq-accordion-content {
+  @apply !p-0 !pt-[18px] !font-normal !text-sm !text-grey-30;
 }

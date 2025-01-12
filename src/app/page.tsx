@@ -1,4 +1,5 @@
 import AboutUsSection from '@/components/AboutUsSection';
+import FAQSection from '@/components/FAQSection';
 import HeroSection from '@/components/HeroSection';
 import ProductsSection from '@/components/ProductsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
@@ -34,6 +35,8 @@ export default function Home() {
       <AboutUsSection />
 
       <TestimonialsSection />
+
+      <FAQSection />
 
       {/* How it Works ? */}
       <section className="wrapper mb-10 space-y-10 laptop:mb-[100px] laptop:space-y-[50px] desktop:mb-[150px] desktop:space-y-20">
