@@ -1,5 +1,6 @@
 import AboutUsSection from '@/components/AboutUsSection';
 import HeroSection from '@/components/HeroSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import SectionHeading from '@/components/ui/SectionHeading';
 
 const experienceSteps = [
@@ -28,6 +29,8 @@ export default function Home() {
       <HeroSection />
 
       <AboutUsSection />
+
+      <TestimonialsSection />
 
       {/* How it Works ? */}
       <section className="wrapper space-y-10 py-10 laptop:space-y-[50px] laptop:py-[100px] desktop:space-y-20 desktop:py-[150px]">

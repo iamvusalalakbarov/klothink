@@ -29,7 +29,7 @@ const SectionHeading: React.FC<ISectionHeadingProps> = (props) => {
           {props.title}
         </h2>
       </div>
-      <p className="text-sm text-grey-40 laptop:text-base desktop:text-lg">
+      <p className="text-sm text-grey-40 lg:max-w-[75%] laptop:text-base desktop:text-lg">
         {props.description}
       </p>
     </div>

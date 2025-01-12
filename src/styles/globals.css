@@ -5,3 +5,7 @@
 .wrapper {
   @apply mx-auto px-4 laptop:max-w-[1440px] laptop:px-20 desktop:max-w-[1920px] desktop:px-40;
 }
+
+.custom-swiper-button.disabled {
+  @apply bg-white text-grey-40 border border-grey-70 cursor-not-allowed;
+}
