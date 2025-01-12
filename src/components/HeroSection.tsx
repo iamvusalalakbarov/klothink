@@ -36,8 +36,8 @@ const colors = ['#739CDA', '#DAA573', '#DAD673'];
 
 const HeroSection = () => {
   return (
-    <section className="wrapper mb-20 mt-10 flex flex-col gap-y-10 laptop:mb-[150px] laptop:mt-20 laptop:flex-row laptop:items-center laptop:justify-between laptop:gap-x-[60px] desktop:mb-[200px] desktop:mt-[100px] desktop:gap-x-20">
-      <div className="flex flex-col gap-y-10 laptop:w-1/2 laptop:gap-y-[60px] laptop:py-3 desktop:gap-y-20 desktop:py-0">
+    <section className="wrapper mb-20 mt-10 flex flex-col gap-y-10 lg:flex-row lg:items-center lg:justify-between lg:gap-x-[30px] laptop:mb-[150px] laptop:mt-20 laptop:gap-x-[60px] desktop:mb-[200px] desktop:mt-[100px] desktop:gap-x-20">
+      <div className="flex flex-col gap-y-10 lg:w-1/2 lg:py-3 laptop:gap-y-[60px] desktop:gap-y-20 desktop:py-0">
         <div className="space-y-6 laptop:space-y-10">
           <div>
             <SectionHeading
@@ -50,11 +50,11 @@ const HeroSection = () => {
             />
           </div>
 
-          <div className="flex items-center justify-between gap-x-2 laptop:justify-start">
+          <div className="flex items-center justify-between gap-x-2 lg:justify-start">
             <CustomButton
               variant={CustomButtonVariant.PRIMARY}
               href="#"
-              className="w-full laptop:w-[148px]"
+              className="w-full lg:w-[148px]"
             >
               <ShoppingBagIcon className="size-5" />
               Shop Now
@@ -62,7 +62,7 @@ const HeroSection = () => {
             <CustomButton
               variant={CustomButtonVariant.SECONDARY}
               href="#"
-              className="w-full laptop:w-[148px]"
+              className="w-full lg:w-[148px]"
             >
               Contact Us
             </CustomButton>
