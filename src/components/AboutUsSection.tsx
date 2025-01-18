@@ -13,6 +13,7 @@ import {
   ArrowDownIcon,
   ArrowUpIcon,
 } from '@heroicons/react/20/solid';
+import ViewAllButton from './ui/ViewAllButton';
 
 const aboutUsData = [
   {
@@ -94,17 +95,7 @@ const AboutUsSection = () => {
           </div>
         ))}
 
-        <button
-          className="flex items-center justify-center gap-x-1 text-sm font-semibold text-grey-30 md:hidden"
-          onClick={toggleViewAll}
-        >
-          {viewAll ? 'View Less' : 'View All'}
-          {viewAll ? (
-            <ArrowUpIcon className="size-4" />
-          ) : (
-            <ArrowDownIcon className="size-4" />
-          )}
-        </button>
+        <ViewAllButton viewAll={viewAll} onClick={toggleViewAll} />
       </div>
     </section>
   );
