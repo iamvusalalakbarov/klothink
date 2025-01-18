@@ -121,7 +121,7 @@ const copyrightLinks = [
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="bg-white">
       <div className="border-y border-light-95 pt-[30px] lg:pt-0">
         <div className="wrapper lg:flex">
           <div className="space-y-[30px] lg:p-20 lg:pl-0">
