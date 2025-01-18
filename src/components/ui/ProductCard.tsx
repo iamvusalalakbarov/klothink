@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import { IProduct } from '@/app/products/page';
 import { ShoppingCartIcon } from '@heroicons/react/24/solid';
+import { IProduct } from '@/types/interfaces';
 
 interface IProductCardProps {
   product: IProduct;

@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { CustomSwiperButtonDirection } from '@/types/enums';
-import { IProduct } from '@/app/products/page';
 import CustomSwiperButton from './CustomSwiperButton';
 import CustomSwiper from './CustomSwiper';
 import ProductCard from './ProductCard';
+import { IProduct } from '@/types/interfaces';
 
 interface IProductsSwiperProps {
   index: number;

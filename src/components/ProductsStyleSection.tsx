@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
-import { IProductStyle } from '@/app/products/page';
 import ProductCard from './ui/ProductCard';
 import ProductsSwiper from './ui/ProductsSwiper';
 import ViewAllButton from './ui/ViewAllButton';
+import { IProductsStyle } from '@/types/interfaces';
 
 interface IProductsStyleSectionProps {
   index: number;
-  productsStyle: IProductStyle;
+  productsStyle: IProductsStyle;
 }
 
 const ProductsStyleSection: React.FC<IProductsStyleSectionProps> = (props) => {
