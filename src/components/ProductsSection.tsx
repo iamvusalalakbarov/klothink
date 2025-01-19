@@ -12,6 +12,7 @@ import Image from 'next/image';
 import CustomSwiper from './ui/CustomSwiper';
 import { ShoppingCartIcon } from '@heroicons/react/24/solid';
 import CustomSwiperButton from './ui/CustomSwiperButton';
+import SwiperProgressBar from './ui/SwiperProgressBar';
 
 const productCategories = ['All', 'Menswear', 'Womenswear', 'Kidswear'];
 const productStyles = ['Casual', 'Formal', 'Party'];
@@ -57,12 +58,14 @@ const products = [
     image: '/images/products/product-4.png',
   },
 ];
+const slidesPerViewOnLargerScreens = 4;
 
 const ProductsSection = () => {
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
   const [activeStyleIndex, setActiveStyleIndex] = useState(0);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const swiperProgressBarInnerRef = useRef<HTMLDivElement | null>(null);
+  const totalSwiperSteps = products.length - slidesPerViewOnLargerScreens + 1;
 
   return (
     <section className="wrapper mb-20 space-y-10 laptop:mb-[150px] laptop:space-y-[60px]">
@@ -128,7 +131,7 @@ const ProductsSection = () => {
           spaceBetween={30}
           breakpoints={{
             1024: {
-              slidesPerView: 4,
+              slidesPerView: slidesPerViewOnLargerScreens,
             },
           }}
           navigation={{
@@ -171,17 +174,11 @@ const ProductsSection = () => {
         </CustomSwiper>
 
         <div className="flex items-center justify-between gap-[100px]">
-          <div className="hidden h-[7px] w-full rounded-full bg-light-90 lg:block">
-            <div
-              ref={swiperProgressBarInnerRef}
-              className="h-full rounded-full bg-grey-15"
-              style={{
-                width: `${100 / products.length}%`,
-                transform: `translateX(${swiperProgressBarInnerRef.current ? swiperProgressBarInnerRef.current.offsetWidth * activeSlideIndex : 0}px)`, // Adjust translateX based on current slide
-                transition: 'transform 0.5s ease',
-              }}
-            />
-          </div>
+          <SwiperProgressBar
+            ref={swiperProgressBarInnerRef}
+            totalSwiperSteps={totalSwiperSteps}
+            activeSlideIndex={activeSlideIndex}
+          />
           <div className="products-swiper-buttons absolute bottom-[5px] right-0 z-10 flex items-center gap-x-2.5 bg-white pl-2 lg:static">
             <CustomSwiperButton direction={CustomSwiperButtonDirection.PREV} />
             <CustomSwiperButton direction={CustomSwiperButtonDirection.NEXT} />
