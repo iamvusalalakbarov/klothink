@@ -13,7 +13,7 @@ interface ICustomButtonProps {
 
 const CustomButton: React.FC<ICustomButtonProps> = (props) => {
   const className = clsx(
-    `flex items-center justify-center gap-x-1.5 rounded-[32px] py-[14px] desktop:gap-x-2.5 desktop:py-[18px] font-semibold text-nowrap self-start lg:self-auto ${props.className}`,
+    `flex items-center justify-center gap-x-1.5 rounded-[32px] py-[14px] desktop:gap-x-2.5 desktop:py-[18px] font-medium text-nowrap self-start lg:self-auto ${props.className}`,
     {
       'bg-primary-50 text-grey-15':
         props.variant === CustomButtonVariant.PRIMARY,
