@@ -8,6 +8,7 @@ import {
   ArrowLongRightIcon,
 } from '@heroicons/react/24/solid';
 import Link from 'next/link';
+import FAQSection from '@/components/FAQSection';
 
 const heroGridData = [
   {
@@ -202,6 +203,8 @@ export default function ContactSupport() {
           </div>
         ))}
       </section>
+
+      <FAQSection />
     </div>
   );
 }
