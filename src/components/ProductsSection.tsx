@@ -90,9 +90,10 @@ const ProductsSection = () => {
             <React.Fragment key={index}>
               <span
                 onClick={() => setActiveCategoryIndex(index)}
-                className={clsx('cursor-pointer uppercase', {
+                className={clsx('cursor-pointer uppercase transition-colors', {
                   'font-semibold text-grey-10': activeCategoryIndex === index,
-                  'font-medium text-grey-60': activeCategoryIndex !== index,
+                  'font-medium text-grey-60 hover:text-grey-10':
+                    activeCategoryIndex !== index,
                 })}
               >
                 {category}
@@ -110,10 +111,11 @@ const ProductsSection = () => {
               key={index}
               onClick={() => setActiveStyleIndex(index)}
               className={clsx(
-                'w-full rounded-[32px] py-3 text-sm font-semibold transition-colors lg:px-5',
+                'w-full rounded-[32px] border py-3 text-sm font-semibold transition-colors lg:px-5',
                 {
-                  'bg-grey-15 text-white': index === activeStyleIndex,
-                  'border border-light-95 text-grey-15':
+                  'border-grey-15 bg-grey-15 text-white':
+                    index === activeStyleIndex,
+                  'border-light-95 text-grey-15 hover:bg-grey-15 hover:text-white':
                     index !== activeStyleIndex,
                 }
               )}

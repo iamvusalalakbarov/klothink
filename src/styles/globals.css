@@ -11,7 +11,7 @@
 }
 
 .custom-swiper-button.disabled {
-  @apply bg-white text-grey-40 border border-grey-70 cursor-not-allowed;
+  @apply bg-white text-grey-40 border border-grey-70 cursor-not-allowed hover:bg-white;
 }
 
 /* Mantine Accordion for FAQ */
@@ -20,7 +20,7 @@
 }
 
 .faq-accordion-item {
-  @apply !p-6 !rounded-[14px] !bg-white data-[active=true]:!bg-light-99 !border !border-light-95;
+  @apply !p-6 !rounded-[14px] !bg-white data-[active=true]:!bg-light-99 !border !border-light-95 hover:!bg-light-99 !transition-colors;
 }
 
 .faq-accordion-control {

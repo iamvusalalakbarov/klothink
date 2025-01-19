@@ -98,10 +98,14 @@ const FAQSection = () => {
           <React.Fragment key={index}>
             <span
               onClick={() => setActiveCategoryIndex(index)}
-              className={clsx('cursor-pointer text-nowrap uppercase', {
-                'font-semibold text-grey-10': activeCategoryIndex === index,
-                'font-medium text-grey-60': activeCategoryIndex !== index,
-              })}
+              className={clsx(
+                'cursor-pointer text-nowrap font-medium uppercase transition-colors',
+                {
+                  'text-grey-10': activeCategoryIndex === index,
+                  'text-grey-60 hover:text-grey-10':
+                    activeCategoryIndex !== index,
+                }
+              )}
             >
               {category}
             </span>

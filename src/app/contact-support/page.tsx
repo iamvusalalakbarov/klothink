@@ -172,10 +172,10 @@ export default function ContactSupport() {
 
               <Link
                 href={policy.link}
-                className="flex w-fit items-center justify-center gap-x-1 rounded-[32px] border border-light-95 bg-light-97 px-5 py-[14px] text-sm font-semibold text-grey-15"
+                className="group flex w-fit items-center justify-center gap-x-1 rounded-[32px] border border-light-95 bg-light-97 px-5 py-[14px] text-sm font-semibold text-grey-15 transition-colors hover:bg-white"
               >
                 {policy.buttonTitle}
-                <ArrowLongRightIcon className="size-5" />
+                <ArrowLongRightIcon className="size-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
 

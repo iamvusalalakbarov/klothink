@@ -73,7 +73,8 @@ const ProductDetailSection = () => {
                 className={clsx(
                   'h-[52px] cursor-pointer rounded transition-colors lg:w-[70px]',
                   {
-                    'bg-[#F7F7F8]': activeSlideIndex !== index,
+                    'bg-[#F7F7F8] hover:bg-[#E4E4E7]':
+                      activeSlideIndex !== index,
                     'bg-[#E4E4E7]': activeSlideIndex === index,
                   }
                 )}
@@ -156,7 +157,7 @@ const ProductDetailSection = () => {
                   key={index}
                   onClick={() => setActiveColorIndex(index)}
                   style={{ background: color }}
-                  className="relative size-5 rounded-full"
+                  className="relative size-5 rounded-full transition-colors"
                 >
                   {activeColorIndex === index && (
                     <Image
@@ -183,7 +184,7 @@ const ProductDetailSection = () => {
                   className={clsx(
                     'flex size-[34px] items-center justify-center rounded border px-0.5 py-3 text-sm transition-colors',
                     {
-                      'border-light-95 bg-light-97 text-grey-15':
+                      'border-light-95 bg-light-97 text-grey-15 hover:bg-grey-15 hover:text-white':
                         activeSizeIndex !== index,
                       'border-transparent bg-grey-15 text-white':
                         activeSizeIndex === index,

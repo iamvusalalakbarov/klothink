@@ -22,7 +22,7 @@ const ProductCard: React.FC<IProductCardProps> = (props) => {
 
         <Link
           href="/products/8"
-          className="absolute bottom-0 right-[26px] z-50 translate-y-1/2 rounded-full bg-white p-4"
+          className="absolute bottom-0 right-[26px] z-50 translate-y-1/2 rounded-full bg-white p-4 transition-colors hover:bg-light-97"
         >
           <ShoppingCartIcon className="size-6 text-grey-15 desktop:size-7" />
         </Link>

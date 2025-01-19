@@ -11,7 +11,7 @@ const CustomSwiperButton: React.FC<ICustomSwiperButtonProps> = (props) => {
   return (
     <button
       className={clsx(
-        'custom-swiper-button flex size-10 items-center justify-center rounded-full bg-grey-15 text-white laptop:size-12',
+        'custom-swiper-button flex size-10 items-center justify-center rounded-full bg-grey-15 text-white transition-colors hover:bg-grey-20 laptop:size-12',
         {
           'prev [&>svg]:rotate-180':
             props.direction === CustomSwiperButtonDirection.PREV,

@@ -151,7 +151,7 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Enter Your Email"
-                  className="w-full rounded-[32px] border border-light-95 bg-light-99 px-4 py-[14px] text-sm font-medium text-grey-15 outline-none placeholder:text-grey-60"
+                  className="w-full rounded-[32px] border border-light-95 bg-light-99 px-4 py-[14px] text-sm font-medium text-grey-15 outline-none transition-colors placeholder:text-grey-60 hover:border-grey-10 focus:border-grey-10"
                 />
 
                 <CustomButton
@@ -182,7 +182,7 @@ const Footer = () => {
               <div key={index} className="space-y-6">
                 <Link
                   href={item.link}
-                  className="text-lg font-medium text-grey-15"
+                  className="text-lg font-medium text-grey-15 transition-colors hover:text-grey-40"
                 >
                   {item.title}
                 </Link>
@@ -190,7 +190,10 @@ const Footer = () => {
                 <ul className="space-y-[14px]">
                   {item.sub.map((subItem, subIndex) => (
                     <li key={subIndex}>
-                      <Link href={subItem.link} className="text-grey-40">
+                      <Link
+                        href={subItem.link}
+                        className="text-grey-40 transition-colors hover:text-grey-10"
+                      >
                         {subItem.title}
                       </Link>
                     </li>
@@ -211,7 +214,7 @@ const Footer = () => {
             >
               <Link
                 href={item.link}
-                className="text-sm text-grey-60 desktop:text-lg"
+                className="text-sm text-grey-60 transition-colors hover:text-grey-10 desktop:text-lg"
               >
                 {item.title}
               </Link>

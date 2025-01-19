@@ -29,11 +29,12 @@ const Header = () => {
                 key={index}
                 href={`/${link.slug}`}
                 className={clsx(
-                  'rounded-full border px-5 py-3 text-sm font-medium desktop:px-6 desktop:py-[14px] desktop:text-lg',
+                  'rounded-full border px-5 py-3 text-sm font-medium transition-colors desktop:px-6 desktop:py-[14px] desktop:text-lg',
                   {
                     'border-transparent bg-light-97 text-grey-15':
                       slug === link.slug,
-                    'border-light-95 bg-white text-grey-40': slug !== link.slug,
+                    'border-light-95 bg-white text-grey-40 hover:bg-light-97':
+                      slug !== link.slug,
                   }
                 )}
               >
@@ -55,17 +56,20 @@ const Header = () => {
           </Link>
 
           <div className="flex items-center gap-x-2.5 desktop:gap-x-[14px]">
-            <Link href="#" className="rounded-full bg-primary-50 p-3">
+            <Link
+              href="#"
+              className="rounded-full bg-primary-50 p-3 transition-colors hover:bg-primary-70"
+            >
               <ShoppingCartIcon className="size-5 text-grey-15 desktop:size-6" />
             </Link>
             <Link
-              href="contact-support"
+              href="/contact-support"
               className={clsx(
-                'rounded-full border px-5 py-3 text-sm font-medium desktop:px-6 desktop:py-[14px] desktop:text-lg',
+                'rounded-full border px-5 py-3 text-sm font-medium transition-colors desktop:px-6 desktop:py-[14px] desktop:text-lg',
                 {
                   'border-transparent bg-light-97 text-grey-15':
                     slug === 'contact-support',
-                  'border-light-95 bg-white text-grey-40':
+                  'border-light-95 bg-white text-grey-40 hover:bg-light-97':
                     slug !== 'contact-support',
                 }
               )}

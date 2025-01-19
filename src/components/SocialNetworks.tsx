@@ -75,7 +75,7 @@ const SocialNetworks = () => {
         <li key={index}>
           <Link
             href={social.link}
-            className="flex size-9 items-center justify-center rounded-full bg-grey-15 laptop:size-[44px]"
+            className="flex size-9 items-center justify-center rounded-full bg-grey-15 transition-colors hover:bg-grey-20 laptop:size-[44px]"
           >
             {social.icon}
           </Link>

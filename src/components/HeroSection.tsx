@@ -149,7 +149,7 @@ const HeroSection = () => {
 
                   <Link
                     href="#"
-                    className="flex items-center justify-center gap-x-1.5 rounded-full bg-white p-2 pl-[14px] text-sm font-medium text-grey-15"
+                    className="flex items-center justify-center gap-x-1.5 rounded-full bg-white p-2 pl-[14px] text-sm font-medium text-grey-15 transition-colors hover:bg-light-95"
                   >
                     View Similar
                     <ArrowLongRightIcon className="size-4" />
