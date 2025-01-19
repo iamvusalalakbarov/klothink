@@ -29,11 +29,11 @@ const Header = () => {
                 key={index}
                 href={`/${link.slug}`}
                 className={clsx(
-                  'rounded-full px-5 py-3 text-sm font-medium desktop:px-6 desktop:py-[14px] desktop:text-lg',
+                  'rounded-full border px-5 py-3 text-sm font-medium desktop:px-6 desktop:py-[14px] desktop:text-lg',
                   {
-                    'bg-light-97 text-grey-15': slug === link.slug,
-                    'border border-light-95 bg-white text-grey-40':
-                      slug !== link.slug,
+                    'border-transparent bg-light-97 text-grey-15':
+                      slug === link.slug,
+                    'border-light-95 bg-white text-grey-40': slug !== link.slug,
                   }
                 )}
               >
@@ -61,10 +61,11 @@ const Header = () => {
             <Link
               href="contact-support"
               className={clsx(
-                'rounded-full px-5 py-3 text-sm font-medium desktop:px-6 desktop:py-[14px] desktop:text-lg',
+                'rounded-full border px-5 py-3 text-sm font-medium desktop:px-6 desktop:py-[14px] desktop:text-lg',
                 {
-                  'bg-light-97 text-grey-15': slug === 'contact-support',
-                  'border border-light-95 bg-white text-grey-40':
+                  'border-transparent bg-light-97 text-grey-15':
+                    slug === 'contact-support',
+                  'border-light-95 bg-white text-grey-40':
                     slug !== 'contact-support',
                 }
               )}
