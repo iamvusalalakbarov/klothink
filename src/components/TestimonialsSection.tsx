@@ -8,8 +8,10 @@ import SectionHeading from './ui/SectionHeading';
 import StarShape from './StarShape';
 import CustomSwiper from './ui/CustomSwiper';
 import CustomSwiperButton from './ui/CustomSwiperButton';
+import { IReview } from '@/types/interfaces';
+import Reviews from './ui/Reviews';
 
-const testimonials = [
+const testimonials: Array<IReview> = [
   {
     customer: 'Sarah Thompson',
     comment:
@@ -72,80 +74,7 @@ const TestimonialsSection = () => {
         </CustomButton>
       </div>
 
-      <div className="relative space-y-5 rounded-2xl border border-light-97 bg-light-99 p-5 lg:p-6 laptop:space-y-0">
-        <CustomSwiper
-          autoplay
-          slidesPerView={1}
-          spaceBetween={20}
-          navigation={{
-            prevEl: '.testimonials-swiper-buttons .prev',
-            nextEl: '.testimonials-swiper-buttons .next',
-            disabledClass: 'disabled',
-          }}
-          breakpoints={{
-            1024: {
-              slidesPerView: 3,
-            },
-            1920: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-          }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="space-y-5 rounded-2xl border border-light-95 bg-white p-[30px] laptop:space-y-[30px] laptop:p-10"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex items-center gap-x-2.5">
-                  <div className="relative size-[50px] rounded-full bg-[#FFEEB2]">
-                    <Image
-                      src={testimonial.avatar}
-                      alt={testimonial.customer}
-                      fill
-                      unoptimized
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <div className="font-medium text-grey-15">
-                      {testimonial.customer}
-                    </div>
-
-                    <div className="flex items-center gap-x-[3px] desktop:gap-x-[5px]">
-                      {Array.from({ length: 5 }).map((_, index) => (
-                        <StarShape
-                          key={index}
-                          filled={testimonial.stars >= index + 1}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="relative size-10 desktop:size-[60px]">
-                  <Image
-                    src="/images/quotes-icon.svg"
-                    alt="Quotes Icon"
-                    fill
-                    unoptimized
-                  />
-                </div>
-              </div>
-
-              <p className="line-clamp-3 text-sm text-grey-30 laptop:text-base desktop:text-lg">
-                {testimonial.comment}
-              </p>
-            </div>
-          ))}
-        </CustomSwiper>
-
-        <div className="testimonials-swiper-buttons left-0 flex items-center justify-center gap-x-2.5 laptop:absolute laptop:-left-[14px] laptop:-right-[14px] laptop:top-1/2 laptop:z-10 laptop:-translate-y-1/2 laptop:justify-between">
-          <CustomSwiperButton direction={CustomSwiperButtonDirection.PREV} />
-          <CustomSwiperButton direction={CustomSwiperButtonDirection.NEXT} />
-        </div>
-      </div>
+      <Reviews reviews={testimonials} />
     </section>
   );
 };

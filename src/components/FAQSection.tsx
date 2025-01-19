@@ -6,6 +6,8 @@ import SectionHeading from './ui/SectionHeading';
 import { Accordion } from '@mantine/core';
 import { PlusIcon } from '@heroicons/react/24/solid';
 import { useMediaQuery } from '@mantine/hooks';
+import FaqList from './ui/FaqList';
+import { IFaq } from '@/types/interfaces';
 
 const faqCategories = [
   'All',
@@ -15,7 +17,7 @@ const faqCategories = [
   'Customer Support',
 ];
 
-const faqs = [
+const faqs: IFaq[] = [
   {
     question: 'Can I modify my order after placing it?',
     answer:
@@ -110,38 +112,7 @@ const FAQSection = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 gap-x-5 md:grid-cols-2 lg:grid-cols-3">
-        {Array.from({ length: isLargeScreen ? 3 : 2 }).map((_, i) => {
-          const start = Math.floor((faqs.length / 3) * i);
-          const end = Math.floor((faqs.length / 3) * (i + 1));
-
-          return (
-            <Accordion
-              key={i}
-              chevron={
-                <PlusIcon className="size-5 text-[#4C4C4C] laptop:size-6" />
-              }
-              classNames={{
-                root: 'faq-accordion-root',
-                item: 'faq-accordion-item',
-                control: 'faq-accordion-control',
-                chevron: 'faq-accordion-chevron',
-                label: 'faq-accordion-label',
-                content: 'faq-accordion-content',
-              }}
-              value={activeFaqValue}
-              onChange={setActiveFaqValue}
-            >
-              {faqs.slice(start, end).map((faq, j) => (
-                <Accordion.Item key={j} value={faq.question}>
-                  <Accordion.Control>{faq.question}</Accordion.Control>
-                  <Accordion.Panel>{faq.answer}</Accordion.Panel>
-                </Accordion.Item>
-              ))}
-            </Accordion>
-          );
-        })}
-      </div>
+      <FaqList faqs={faqs} />
     </section>
   );
 };

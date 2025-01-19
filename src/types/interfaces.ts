@@ -10,3 +10,15 @@ export interface IProductsStyle {
   description: string;
   products: Array<IProduct>;
 }
+
+export interface IReview {
+  customer: string;
+  comment: string;
+  stars: number;
+  avatar: string;
+}
+
+export interface IFaq {
+  question: string;
+  answer: string;
+}

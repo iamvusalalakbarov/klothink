@@ -3,10 +3,10 @@
 import React from 'react';
 import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide, SwiperProps } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay, Thumbs } from 'swiper/modules';
 import 'swiper/css';
 
-SwiperCore.use([Navigation, Autoplay]);
+SwiperCore.use([Navigation, Autoplay, Thumbs]);
 
 interface ICustomSwiperProps extends SwiperProps {
   children: Array<React.ReactNode>;
@@ -14,7 +14,7 @@ interface ICustomSwiperProps extends SwiperProps {
 
 const CustomSwiper: React.FC<ICustomSwiperProps> = (props) => {
   return (
-    <Swiper {...props}>
+    <Swiper {...props} style={{ height: '100%' }}>
       {props.children.map((slide, index) => (
         <SwiperSlide key={index}>{slide}</SwiperSlide>
       ))}
