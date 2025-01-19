@@ -22,7 +22,10 @@ const ProductsSwiper: React.FC<IProductsSwiperProps> = (props) => {
   return (
     <div className="space-y-10">
       <CustomSwiper
-        autoplay
+        autoplay={{
+          delay: 5000,
+        }}
+        speed={1000}
         slidesPerView={1}
         spaceBetween={20}
         breakpoints={{

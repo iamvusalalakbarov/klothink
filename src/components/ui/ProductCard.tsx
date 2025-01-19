@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { ShoppingCartIcon } from '@heroicons/react/24/solid';
 import { IProduct } from '@/types/interfaces';
+import Link from 'next/link';
 
 interface IProductCardProps {
   product: IProduct;
@@ -19,9 +20,12 @@ const ProductCard: React.FC<IProductCardProps> = (props) => {
           className="object-contain"
         />
 
-        <button className="absolute bottom-0 right-[26px] z-50 translate-y-1/2 rounded-full bg-white p-4">
+        <Link
+          href="/products/8"
+          className="absolute bottom-0 right-[26px] z-50 translate-y-1/2 rounded-full bg-white p-4"
+        >
           <ShoppingCartIcon className="size-6 text-grey-15 desktop:size-7" />
-        </button>
+        </Link>
       </div>
 
       <div className="space-y-1.5 bg-white p-5 laptop:px-6 laptop:py-[30px] desktop:px-[30px] desktop:py-10">
