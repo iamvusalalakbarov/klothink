@@ -2,6 +2,7 @@
 
 import React from 'react';
 import clsx from 'clsx';
+import MotionTypewriter from './MotionTypewriter';
 
 interface ISectionHeadingProps {
   title: string;
@@ -26,7 +27,7 @@ const SectionHeading: React.FC<ISectionHeadingProps> = (props) => {
           {props.subtitle}
         </span>
         <h2 className="text-[28px] font-semibold text-grey-10 laptop:text-[38px] desktop:text-[48px]">
-          {props.title}
+          <MotionTypewriter text={props.title} />
         </h2>
       </div>
       <p className="text-sm text-grey-40 lg:max-w-[75%] laptop:text-base desktop:text-lg">

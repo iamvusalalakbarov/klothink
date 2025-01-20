@@ -10,14 +10,23 @@ import CustomSwiper from './ui/CustomSwiper';
 import SectionHeading from './ui/SectionHeading';
 import React from 'react';
 import CustomSwiperButton from './ui/CustomSwiperButton';
+import MotionCountUp from './ui/MotionCountUp';
 
 const heroGridData = [
   {
-    title: 'Over 1000+',
+    title: (
+      <>
+        Over <MotionCountUp count={1000} />+
+      </>
+    ),
     description: 'Trendsetting Styles',
   },
   {
-    title: '99%',
+    title: (
+      <>
+        <MotionCountUp count={99} />%
+      </>
+    ),
     description: 'Customer Satisfaction Rate',
   },
   {

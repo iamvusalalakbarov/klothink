@@ -10,6 +10,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import '../styles/globals.css';
 import '@mantine/core/styles.css';
+import MotionScrollProgress from '@/components/MotionScrollProgress';
 
 const manrope = Manrope({
   variable: '--font-manrope',
@@ -34,6 +35,7 @@ export default function RootLayout(props: Readonly<IRootLayoutProps>) {
       </head>
       <body className={`${manrope.variable} antialiased`}>
         <MantineProvider>
+          <MotionScrollProgress />
           <NotificationBar />
           <Header />
           {props.children}
