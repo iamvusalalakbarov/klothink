@@ -10,11 +10,59 @@
   @apply mx-auto px-4 laptop:max-w-[1440px] laptop:px-20 desktop:max-w-[1920px] desktop:px-40;
 }
 
+/* Burger Menu */
+
+.burger-menu {
+  @apply flex items-center justify-center px-[4.25px] py-[8.5px];
+
+  span {
+    @apply w-[25.5px] h-0.5 rounded-full bg-grey-15 relative transition-all duration-300;
+
+    &::before, &::after {
+      @apply absolute h-0.5 rounded-full bg-grey-15 right-0 transition-all duration-300;
+      content: '';
+    }
+
+    &::before {
+      @apply -top-[6.5px] left-0;
+    }
+
+    &::after {
+      @apply top-[6.5px] left-1/2;
+    }
+  }
+}
+
+.mobile-nav {
+  @apply fixed top-40 left-0 right-0 bottom-0 bg-white z-40 translate-x-full transition-all duration-500 flex flex-col gap-y-4 items-center pt-[20vh];
+}
+
+#burger-menu:checked + header {
+  .burger-menu {
+    span {
+      @apply bg-transparent;
+  
+      &::before {
+        @apply rotate-45 translate-y-[6.5px];
+      }
+  
+      &::after {
+        @apply -rotate-45 -translate-y-[6.5px] left-0;
+      }
+    }
+  }
+
+  .mobile-nav {
+    @apply translate-x-0;
+  }
+}
+
 .custom-swiper-button.disabled {
   @apply bg-white text-grey-40 border border-grey-70 cursor-not-allowed hover:bg-white;
 }
 
 /* Mantine Accordion for FAQ */
+
 .faq-accordion-root {
   @apply !space-y-4 max-md:[&:not(:first-child)]:!hidden;
 }

@@ -8,20 +8,28 @@ import {
   ShoppingCartIcon,
   Bars3BottomRightIcon,
 } from '@heroicons/react/24/solid';
+import { useRef } from 'react';
 
 const navLinks = [
   { title: 'Home', slug: '' },
   { title: 'Products', slug: 'products' },
 ];
 
+const mobileNavLinks = [
+  { title: 'Home', slug: '' },
+  { title: 'Products', slug: 'products' },
+  { title: 'Contact', slug: 'contact-support' },
+];
+
 const Header = () => {
+  const burgerMenuCheckboxRef = useRef<HTMLInputElement | null>(null);
   const pathname = usePathname();
   const slug = pathname.split('/')[1];
 
   return (
     <>
       {/* Laptop, Desktop View */}
-      <header className="hidden border-b border-light-95 bg-white lg:block">
+      <header className="sticky top-0 z-40 hidden border-b border-light-95 bg-white lg:block">
         <div className="wrapper relative flex items-center justify-between bg-white py-[18px]">
           <div className="flex items-center gap-x-2.5">
             {navLinks.map((link, index) => (
@@ -80,8 +88,15 @@ const Header = () => {
         </div>
       </header>
 
+      <input
+        type="checkbox"
+        className="hidden"
+        id="burger-menu"
+        ref={burgerMenuCheckboxRef}
+      />
+
       {/* Mobile View */}
-      <header className="border-b border-light-95 bg-white lg:hidden">
+      <header className="sticky top-[75px] z-40 border-b border-light-95 bg-white lg:hidden">
         <div className="wrapper flex items-center justify-between py-5">
           <Link href="/" className="relative size-9">
             <Image
@@ -97,11 +112,32 @@ const Header = () => {
               <ShoppingCartIcon className="size-5 text-grey-15 desktop:size-6" />
             </Link>
 
-            <button>
+            {/* <button>
               <Bars3BottomRightIcon className="size-8 text-grey-15" />
-            </button>
+            </button> */}
+
+            <label htmlFor="burger-menu" className="burger-menu">
+              <span></span>
+            </label>
           </div>
         </div>
+
+        <nav className="mobile-nav">
+          {mobileNavLinks.map((link, index) => (
+            <Link
+              key={index}
+              href={`/${link.slug}`}
+              className="text-2xl font-medium text-grey-15"
+              onClick={() => {
+                if (burgerMenuCheckboxRef.current) {
+                  burgerMenuCheckboxRef.current.checked = false;
+                }
+              }}
+            >
+              {link.title}
+            </Link>
+          ))}
+        </nav>
       </header>
     </>
   );
